@@ -342,10 +342,10 @@ a{
 }
 
 .adres{
-  letter-spacing:2px;
+  letter-spacing:0px;
   font-size:24px!important;
   color:white;
-  font-family: 'Creepster', cursive;
+  font-family: 'Raleway', sans-serif;
   text-shadow:0px 4px 4px #892237; 
 }
 
