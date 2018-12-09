@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" alt="foto" href="../img/halloween-bats (2).png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="google-site-verification" content="kvIqcgZPSQlembppZr_Vm1JpPsOX96bnbrFXoVoX7BI" />
+  <meta name="description" content="Hét halloween feest in de oude dierentuin van Emmen waar je door de gehele dierentuin de stuipen op het lijf wordt gejaagd door ongure figuren. 28, 29 en 30 Oktober 2018 in Rensenpark Emmen!">
+  <link rel="canonical" href="http://www.boo-at-the-zoo.nl/" />
+  <title> Boo At The Zoo 2019 | Oude Dierenpark Emmen</title>
+  <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
+  <link rel="stylesheet" href="stylesheets/bootstrap.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Creepster|Raleway" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css?family=Krona+One" rel="stylesheet">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121313270-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-121313270-2');
+</script>
+
+</head>
+<div class="icon-bar d-md-block d-none">
+  <!--<a href="#" class="facebook"><i class="fa fa-facebook"></i></a> -->
+  <a href="https://www.facebook.com/pg/BooAtTheZoo/" class="twitter" data-toggle="tooltip" title="Hooray!"><i class="fab fa-facebook-square"></i></a> 
+  <a href="https://www.facebook.com/pg/BooAtTheZoo/" class="google"><i class="fab fa-facebook-messenger"></i></a> 
+  <a href="#" class="linkedin" data-toggle="modal" data-target="#ticketModal"><i class="fas fa-ticket-alt"></i></a>
+  <a href="https://www.3dwebdevelopment.com" class="youtube"><i class="fas fa-code"></i></a> 
+</div>
+<body>
+  <section id="home-section" class="background text-center">
+  <!--<div class="container-fluid">-->
+    <div class="dark-overlay container-fluid">
+      <div class="home-inner">
+        <div class="container">
+         </a>
+          <div class="row">
+            <div class="none d-lg-block">
+              <h1 class="display-1"><strong> </strong> <strong></strong></h1>
+       <img src="../img/halloween-bats (1).png" alt="foto" alt="" class="logo pt-5">
+            </div>
+            <div class="col-lg-12 text-center text-white">
+            </div>            
+       
+          </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--</div>-->
+  </section>
+  <section id="gallerij">
+      <h1 class="header text-center">
+       <!--<img class="d-md-block d-none" src="../img/halloween-bats.png" alt="foto" id="bats-h1">-->
+        Foto's
+      </h1>
+       <img class="d-md-block d-none" src="../img/halloween-bats (2).png" alt="foto" id="bats">
+       <img class="d-md-block d-none" src="../img/halloween-bats (1).png" alt="foto" id="bats1">
+       <img class="d-md-block d-none" src="../img/halloween-bats.png" alt="foto" id="bats2">
+       <img class="d-md-block d-none" src="../img/halloween-bats (2).png" alt="foto" id="bats3">
+       <img class="d-md-block d-none" src="../img/halloween-bats (1).png" alt="foto" id="bats4">
+       <img class="d-md-block d-none" src="../img/halloween-bats (2).png" alt="foto" id="bats5">
+       <img class="d-md-block d-none" src="../img/halloween-bats.png" alt="foto" id="bats6">
+       <img class="d-md-block d-none" src="../img/halloween-bats (1).png" alt="foto" id="bats7">
+      <h1>
+        
+      </h1>
+    <div class="container" id="foto-box">
+    <div class="mx-auto">
+    <div class="row ">
+      <div class="col-md-4 col-sm-12 p-0 row1">
+           <% row1.forEach(function(fotos){%> 
+   <a data-toggle="modal" data-target="#exampleModalCenter" >
+      <div class="col-sm-12 p-0" id="foto">
+        <img src="<%=fotos.thumbnail%>" class="img-fluid" id="img">
+        <div class="overlay text-center d-md-block d-none">
+            <button class="btn btn-outline-warning" data-toggle="modal" data-target="#modal<%=fotos._id%>"><img src="../img/magnify.png" height="50px"></button>
+        </div>
+        </div>
+      </a>
+  <% }) %>
+      </div>
+      <div class="col-md-4 col-sm-12 p-0">
+           <% row2.forEach(function(fotos){%> 
+   <a data-toggle="modal" data-target="#exampleModalCenter" >
+      <div class="col-sm-12 p-0" id="foto">
+        <img src="<%=fotos.thumbnail%>" class="img-fluid" id="img">
+        <div class="overlay text-center d-md-block d-none">
+            <button class="btn btn-outline-warning" data-toggle="modal" data-target="#modal<%=fotos._id%>"><img src="../img/magnify.png" height="50px"></button>
+        </div>
+        </div>
+      </a>
+  <% }) %>
+      </div>
+      <div class="col-md-4 col-sm-12 p-0 row3">
+           <% row3.forEach(function(fotos){%> 
+   <a data-toggle="modal" data-target="#exampleModalCenter">
+      <div class="col-sm-12 p-0" id="foto">
+        <img src="<%=fotos.thumbnail%>" class="img-fluid" id="img">
+        <div class="overlay text-center d-md-block d-none">
+            <button class="btn btn-outline-warning" data-toggle="modal" data-target="#modal<%=fotos._id%>"><img src="../img/magnify.png" height="50px"></button>
+        </div>
+        </div>
+      </a>
+  <% }) %>
+      </div>
+
+      </div>
+      </div>
+      </div>
+  </section>
+
+  <section id="b4footer">
+    
+  </section>
+      <footer>
+      <div class="container-fluid pb-0 pt-3">
+        <div class="row">
+          <div class="col-md-4">
+            <span class="copyright">Copyright &copy; <span id="batz">Boo at the Zoo</span></span>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="mailto:info@talentblik.nl">
+                  <i class="fas fa-at"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com/BooAtTheZoo/">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="tel:06480804487">
+              <i class="fas fa-mobile"></i>
+              </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+              <p> <i class="fas fa-laptop-code"></i> <span class="sig1"> Gemaakt door : </span><span class="sig"><a href="http://www.3dwebdevelopment.com" class="sig">3D Web Development</a></p>
+              </li>
+              <li class="list-inline-item">
+                <a href="#"></a>
+              </li>
+            </ul>
+            <!--<img src="img/icon-merel-half.png" alt="foto" width="100px" alt="">-->
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+  <!-- Load Facebook SDK for JavaScript -->
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoLGMo0sQvfr6BgQZTclIEx8s3Ovw0SzI&callback=myMap"></script>  
+  <!--<script src="js/jquery.min.js"></script>-->
+  <!--<script src="js/popper.min.js"></script>-->
+  <!--<script src="js/bootstrap.min.js"></script>-->
+  </div>
+  <div class="modal fade" id="ticketModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="col-sm-4 bg-purple">
+        <h5>Volgend jaar zijn er weer tickets verkrijgbaar</h5>
+        <button type="button" class="btn btn-outline-warning ml-auto" data-dismiss="modal">Oke</button>
+    </div>
+      </div>
+      <!--<div class="modal-header">-->
+        <!--<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>-->
+        <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+        <!--  <span aria-hidden="true">&times;</span>-->
+        <!--</button>-->
+      <!--<div class="modal-footer">-->
+        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+</div>
+  
+  <!--MODAL-->
+  <% row1.forEach(function(fotos){%> 
+ <div class="modal fade" id="modal<%=fotos._id%>" >
+    <div class="modal-dialog modal-content container">
+      <!--<div class="modal-header">-->
+        <img src="<%=fotos.img%>" class="img-fluid" id="modal-img">
+        <button type="button" class="btn btn-outline-warning" id="modal-close" data-dismiss="modal"><img src="../img/close.png" width="30px"></button>
+      <!--</div>-->
+    </div>
+</div>
+  <% }) %>
+  <% row2.forEach(function(fotos){%> 
+ <div class="modal fade" id="modal<%=fotos._id%>" >
+    <div class="modal-dialog modal-content container">
+      <!--<div class="modal-header">-->
+        <img src="<%=fotos.img%>" class="img-fluid" id="modal-img">
+        <button type="button" class="btn btn-outline-warning" id="modal-close" data-dismiss="modal"><img src="../img/close.png" width="30px"></button>
+      <!--</div>-->
+    </div>
+</div>
+  <% }) %>
+  <% row3.forEach(function(fotos){%> 
+ <div class="modal fade" id="modal<%=fotos._id%>" >
+    <div class="modal-dialog modal-content container">
+      <!--<div class="modal-header">-->
+        <img src="<%=fotos.img%>" class="img-fluid" id="modal-img">
+        <button type="button" class="btn btn-outline-warning" id="modal-close" data-dismiss="modal"><img src="../img/close.png" width="30px"></button>
+      <!--</div>-->
+    </div>
+</div>
+  <% }) %>
+
+
+</body>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</html>

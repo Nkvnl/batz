@@ -1,42 +1,63 @@
 var express = require("express"); // call express
 var app = express();
-const compression = require('compression');
-var sm = require('sitemap');
+var mongoose = require('mongoose')
+var Gallerij = require('./models/gallerij')
 
-app.use(compression());
+mongoose.connect('mongodb://niek1:batz11@ds235053.mlab.com:35053/batz');
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.static(__dirname + "/public"));
 
 
 
-// var app = express(),
-//     sitemap = sm.createSitemap({
-//         hostname: 'http://www.boo-at-the-zoo.nl',
-//         cacheTime: 600000, // 600 sec - cache purge period
-//         urls: [
-//             { url: '/', changefreq: 'daily', priority: 0.3 },
-
-//         ]
-//     });
-
-// app.get('/sitemap.xml', function(req, res) {
-//     sitemap.toXML(function(err, xml) {
-//         if (err) {
-//             return res.status(500).end();
-//         }
-//         res.header('Content-Type', 'application/xml');
-//         res.send(xml);
-//     });
-// });
 app.get("/", function(req, res) {
     res.render("index");
 });
 
-// app.get('/robots.txt', function(req, res) {
-            //     res.type('text/plain');
-            //     res.send("User-agent: *\nDisallow: /");
-            // });
+app.get('/gallerij', function(req, res) {
+    Gallerij.find(function(err, gallerij) {
+        if (err) {
+            console.log(err)
+        }
+        else {
+            console.log(gallerij.length)
+            var maxObjects = gallerij.length / 3; //50 //33
+            console.log(maxObjects)
+            //150               //50
+            //100               //50    //100
+            if (gallerij.length > maxObjects * 2) {
+                var row1 = (gallerij.splice(0, maxObjects)) // 50
+                // console.log(gallerij.splice(0, maxObjects)) // 50
+                console.log(gallerij.length)
+                console.log('row1')
+            } // 100                    //50
+            if (gallerij.length > maxObjects) {
+                var row2 = (gallerij.splice(0, maxObjects))
+                // console.log(gallerij.splice(0, maxObjects))
+                console.log(gallerij.length) // console.log(row2)
+                console.log('row2')
+            }
+            if (gallerij.length > 0 || gallerij.length < maxObjects) {
+                var row3 = (gallerij.splice(0, maxObjects))
+                // console.log(gallerij.splice(0, maxObjects))
+                console.log(gallerij.length) // console.log(row3)
+                console.log('row3')
+            }
+            res.render('gallerij', { row1: row1, row2: row2, row3: row3, all: gallerij });
+        }
+    })
+});
+
+app.get('/gallerij/:id', function(req, res) {
+    Gallerij.findById(req.params.id, function(err, gallerijId) {
+        if (err) {
+            console.log(err)
+        }
+        else {
+            res.render("show", { fotoId: gallerijId })
+        }
+    })
+})
 
 app.listen(process.env.PORT, process.env.IP, function() { // tell node to listen & define a port to view app
     console.log("Passier server starting...");
