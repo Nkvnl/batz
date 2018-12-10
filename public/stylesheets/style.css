@@ -86,6 +86,76 @@ a{
   color: white;
 }
 
+
+
+#home{
+  /*padding:0px;*/
+  /*margin:0;*/
+  /*position:fixed;*/
+  /*top:0;*/
+  /*left:0;*/
+  /*background:;*/
+  background:#C88C2F;
+  /*height:80px;*/
+  width:80px;
+  font-size:40px;
+  z-index:1000000000000000000000000000!important;
+  text-align:center;
+}
+
+#fb{
+  background:#A52945;
+}
+
+#fb1{
+  background:#FBB03B;
+}
+
+#tickets-mob{
+  background: #882237;
+}
+
+#code{
+  background:  #561924;
+}
+
+#code i{
+  color:#fbb03b;
+  text-shadow:3px 3px 0px #892237;  
+  line-height:80px;  
+}
+
+#home i{
+  color:#fbb03b;
+  text-shadow:3px 3px 0px #892237;  
+  line-height:80px;
+}
+
+#fb i{
+  line-height:80px;
+}
+
+#fb1 i{
+  line-height:80px;
+}
+
+#tickets-mob i{
+  line-height:80px;
+}
+
+#icon-bar-mobile{
+  height:80px;
+  max-width:100vw!important;
+  position:fixed;
+  top:0!important;
+  left:0;  
+  right:0;  
+  text-align:center;
+  font-size:24px;
+  z-index:10!important;
+  
+}
+
 .header{
   letter-spacing:5px;
   font-size:124px;
@@ -601,6 +671,7 @@ footer a:hover{
 
 .modal-content{
   background:rgba(0,0,0,0)!important;
+  z-index:100000!important;
   /*box-shadow:0px 20px 40px rgba(0,0,0,0.4);*/
 }
 
@@ -623,7 +694,7 @@ background: linear-gradient(to bottom, #2A131B, #892237); /* W3C, IE 10+/ Edge, 
 
 #modal-close{
   position:absolute;
-  top:30px;
+  bottom:30px;
   right:50px;
   background:rgba(0,0,0,0.5);
 }
