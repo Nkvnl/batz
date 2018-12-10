@@ -156,6 +156,13 @@ a{
   
 }
 
+.nieuw{
+  font-size:12px!important;
+  position:absolute;
+  top:60%;
+  right:40%;
+}
+
 .header{
   letter-spacing:5px;
   font-size:124px;
@@ -377,7 +384,7 @@ a{
 
 .shift{
   border: 2px solid #FBB03B;
-  transform: rotate(5deg);
+  /*transform: rotate(5deg);*/
   box-shadow:0px 40px 80px rgba(0,0,0,0.4);
 }
 
