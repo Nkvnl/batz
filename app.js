@@ -4,6 +4,7 @@ var mongoose = require('mongoose')
 var Gallerij = require('./models/gallerij')
 
 mongoose.connect('mongodb://niek1:batz11@ds235053.mlab.com:35053/batz');
+app.set('port', (process.env.PORT || 3025))
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.static(__dirname + "/public"));
@@ -59,6 +60,6 @@ app.get('/gallerij/:id', function(req, res) {
     })
 })
 
-app.listen(process.env.PORT, process.env.IP, function() { // tell node to listen & define a port to view app
-    console.log("Passier server starting...");
+app.listen(app.get('port'), function() {
+    console.log('starting');
 });
