@@ -29,21 +29,22 @@
 </head>
 <body>
   <div class="row p-0 m-0" id="icon-bar-mobile">
-    <div class="col p-0 m-0" id="home">
+    <div class="col p-0 m-0 icon" id="home">
       <a href="/gallerij" class="" ><i class="fas fa-camera-retro"></i>    </a>
     <span class="badge badge-danger nieuw">140</span>
     </div>
-    <div class="col p-0 m-0" id="fb1">
+    <div class="col p-0 m-0 icon" id="fb1">
       <a href=https://www.facebook.com/pg/BooAtTheZoo/ class="p-0" ><i class="fab fa-facebook-square"></i></a>
     </div>
-    <div class="col p-0 m-0" id="fb">
+    <div class="col p-0 m-0 icon" id="fb">
       <a href="m.me/BooAtTheZoo" data-toggle="modal" data-target="#ticketModal" class="p-0"><i class="fab fa-facebook-messenger"></i></a>
     </div>
-    <div class="col p-0 m-0" id="tickets-mob">
+    <div class="col p-0 m-0 icon" id="tickets-mob">
+      <small class="badge badge-danger" style="position:absolute;font-size:14px; transform:rotate(4deg); z-index:10; top:20px;left:0px;right:0px;">Vanaf 24 April!</small>
       <a href="#" class="p-0"><i class="fas fa-ticket-alt"></i></a>
     </div>
-    <div class="col p-0 m-0" id="code">
-      <a href="https://www.3dwebdevelopment.com" class="p-0" ><i class="fas fa-code"></i></a>
+    <div class="col p-0 m-0 icon" id="code">
+      <a href="https://www.niekvanlosenoord.design" class="p-0" ><i class="fas fa-code"></i></a>
     </div>
   </div>
   <section id="home-section" class="background text-center">
@@ -53,7 +54,7 @@
         <div class="container">
           <div class="row">
             <div class="none d-lg-block">
-              <h1 class="display-1"><strong> </strong> <strong></strong></h1>
+              <h1 class="display-1"></h1>
        <img src="../img/halloween-bats (1).png" alt="foto" alt="" class="logo pt-5">
             </div>
             <div class="col-lg-12 text-center text-white">
@@ -67,13 +68,6 @@
     <!--</div>-->
   </section>
   <div id="fb-root"></div>
-<!--<script>(function(d, s, id) {-->
-<!--  var js, fjs = d.getElementsByTagName(s)[0];-->
-<!--  if (d.getElementById(id)) return;-->
-<!--  js = d.createElement(s); js.id = id;-->
-<!--  js.src = 'https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v3.1';-->
-<!--  fjs.parentNode.insertBefore(js, fjs);-->
-<!--}(document, 'script', 'facebook-jssdk'));</script>-->
   <section id="over">
     
     <div class="container-fluid p-0">
@@ -81,12 +75,9 @@
     <img src="../img/halloween-bats (2).png" class="bats1 d-none d-md-block">
     <p class="par1 pt-5 ">Hét halloween feest in de oude dierentuin van Emmen waar je door de gehele dierentuin de stuipen op het lijf wordt gejaagd door ongure figuren!</p>
     <div class="row"> 
-    <!--<div class="col"></div>-->
     <div class="col-lg-12 pt-5">
-      <!--<iframe class="m-auto d-block video" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FBooAtTheZoo%2Fvideos%2F2563022823724021%2F&width=500&show_text=false&height=280&appId" width="380"height="210" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>-->
     </div>
        
-    <!--<div class="col"></div>-->
     </div>
        <h1 class="header text-center">
         Foto's
@@ -347,7 +338,20 @@ function myMap() {
     </footer>
   
   <!-- Load Facebook SDK for JavaScript -->
+ <script>
   
+var scrollPos = 0;
+window.addEventListener('scroll', function(){
+  let nav = document.querySelector('#icon-bar-mobile')
+  let icons = document.querySelectorAll('.icons')
+  if((document.body.getBoundingClientRect()).top > scrollPos){
+    nav.style.top = '0px'
+  } else {
+    nav.style.top = '-80px'
+  }
+	scrollPos = (document.body.getBoundingClientRect()).top;
+});
+ </script> 
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoLGMo0sQvfr6BgQZTclIEx8s3Ovw0SzI&callback=myMap"></script>  
   <!--<script src="js/jquery.min.js"></script>-->

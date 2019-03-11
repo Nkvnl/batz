@@ -43,7 +43,7 @@
       <a href="#" class="p-0" data-toggle="modal" data-target="#ticketModal"><i class="fas fa-ticket-alt"></i></a>
     </div>
     <div class="col p-0 m-0" id="code">
-      <a href="https://www.3dwebdevelopment.com" class="p-0" ><i class="fas fa-code"></i></a>
+      <a href="https://www.niekvanlosenoord.design" class="p-0" ><i class="fas fa-code"></i></a>
     </div>
   </div>
   <!--</div>-->
@@ -233,6 +233,20 @@
 
 
 </body>
+ <script>
+  
+var scrollPos = 0;
+window.addEventListener('scroll', function(){
+  let nav = document.querySelector('#icon-bar-mobile')
+  let icons = document.querySelectorAll('.icons')
+  if((document.body.getBoundingClientRect()).top > scrollPos){
+    nav.style.top = '0px'
+  } else {
+    nav.style.top = '-80px'
+  }
+	scrollPos = (document.body.getBoundingClientRect()).top;
+});
+ </script> 
 <script>
   $(function () {
   $('[data-toggle="tooltip"]').tooltip()
