@@ -4,7 +4,7 @@ var mongoose = require('mongoose')
 var Gallerij = require('./models/gallerij')
 
 mongoose.connect('mongodb://niek1:batz11@ds235053.mlab.com:35053/batz');
-app.set('port', (process.env.PORT || 3025))
+app.set('port', (process.env.PORT || 3003))
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.static(__dirname + "/public"));
